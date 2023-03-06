@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { StatusLayout } from './layouts/StatusLayout';
-import { Login } from './pages/auth/Login';
 
 import { Home } from './pages/Home';
 import { Success } from './pages/Success';
+import { Login } from './pages/auth/Login';
+import { Register } from './pages/auth/Register';
 
 export function App() {
   return (
@@ -17,7 +18,7 @@ export function App() {
         {/* Auth */}
         <Route path="/auth">
           <Route path="login" element={<Login />} />
-          <Route path="register" element={<h1>Register</h1>} />
+          <Route path="register" element={<Register />} />
         </Route>
 
       </Routes>

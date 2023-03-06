@@ -8,7 +8,7 @@ export function Input({ placeholder, ...props }: InputProps) {
 
   const placeholderStyleVariants = {
     true: 'text-slate-400 text-xs top-3',
-    false: 'text-slate-500 top-1/2 transform -translate-y-1/2',
+    false: 'text-slate-400 text-sm top-1/2 transform -translate-y-1/2',
   };
 
   return (
@@ -18,7 +18,7 @@ export function Input({ placeholder, ...props }: InputProps) {
       <span className={`absolute pl-6 ${ inputRef.current?.value ? placeholderStyleVariants[true] : placeholderStyleVariants[isFocused.toString()] }`}>{ placeholder }</span>
 
       <input 
-        className="px-6 py-5 text-slate-600 focus:outline-none border-none bg-transparent w-full translate-y-2"
+        className="px-6 py-5 text-slate-500 focus:outline-none border-none bg-transparent w-full translate-y-2"
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         ref={inputRef}

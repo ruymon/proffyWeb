@@ -1,5 +1,6 @@
 import * as Checkbox from '@radix-ui/react-checkbox';
 import { FiCheck } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Input } from "../../components/Input";
 import { SideBanner } from "../../components/SideBanner";
@@ -28,7 +29,7 @@ export function Login() {
 
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-0 text-sm text-slate-500">
               <div className="flex items-center gap-1">
-                <Checkbox.Root className="flex h-5 w-5 items-center justify-center rounded-md border border-slate-200 data-[state=checked]:border-green-500 transition-all bg-white data-[state=checked]:bg-green-500 text-white outline-none" defaultChecked id="remember">
+                <Checkbox.Root className="flex h-5 w-5 items-center justify-center rounded-md border border-slate-200 data-[state=checked]:border-green-500 transition-all bg-white data-[state=checked]:bg-green-500 text-white outline-none" id="remember">
                   <Checkbox.Indicator className="CheckboxIndicator">
                     <FiCheck />
                   </Checkbox.Indicator>
@@ -49,7 +50,7 @@ export function Login() {
         <footer className='flex justify-between w-full max-w-md p-6'>
           <div className='flex flex-col'>
             <span className="text-slate-500">Não tem uma conta?</span>
-            <a href="#" className="text-violet-500 font-semibold hover:underline underline-offset-2">Cadastre-se</a>
+            <Link to="/auth/register" className="text-violet-500 font-semibold hover:underline underline-offset-2">Cadastre-se</Link>
           </div>
 
           <span className='text-sm text-slate-400 hidden sm:flex'>É de graça 💜</span>
