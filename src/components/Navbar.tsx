@@ -6,7 +6,7 @@ interface NavbarProps {
 
 export function Navbar({title}: NavbarProps) {
   return (
-    <nav className="w-full flex items-center justify-center bg-violet-600 text-white">
+    <nav className="w-full flex items-center justify-center bg-violet-700 text-white">
       <div className="w-full max-w-6xl px-6 py-4 flex items-center justify-between opacity-80">
         <BackArrow variant="dark" />
         <span className="font-head">{ title }</span>
