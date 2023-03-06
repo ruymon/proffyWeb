@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Success } from './pages/Success';
 import { Login } from './pages/auth/Login';
 import { Register } from './pages/auth/Register';
+import { PasswordRecovery } from './pages/auth/PasswordRecovery';
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
         <Route path="/auth">
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="passwordRecovery" element={<PasswordRecovery />} />
         </Route>
 
       </Routes>
