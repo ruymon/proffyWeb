@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-ms-reveal {
+  display: none;
+}
+
+@layer base {
+  * {
+    @apply focus-visible:outline-violet-500 focus-visible:outline-dashed focus-visible:outline-offset-4 focus-visible:outline-2 focus-visible:bg-violet-500/10;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply selection:bg-violet-500/25 selection:text-violet-500;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[6px] h-0;
+    scrollbar-width: 6px;
+  }
+
+  ::-webkit-scrollbar, ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-100;
+  }
+
+  ::-webkit-scrollbar, ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+}
