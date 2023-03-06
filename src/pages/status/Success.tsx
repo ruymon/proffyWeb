@@ -1,5 +1,5 @@
 import { FiCheckSquare } from "react-icons/fi";
-import { Button } from "../components/Button";
+import { Button } from "../../components/Button";
 
 interface SuccessProps {};
 

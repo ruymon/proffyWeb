@@ -37,7 +37,7 @@ export function Login() {
                 <label htmlFor="remember">Lembrar-me</label>
               </div>
 
-              <a href="#">Esqueci minha senha</a>
+              <Link to="/auth/passwordRecovery">Esqueci minha senha</Link>
             </div>
 
             <Button variant="primary">

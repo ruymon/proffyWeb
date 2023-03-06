@@ -1,20 +1,29 @@
 import { useNavigate } from 'react-router-dom';
-import arrow from './../assets/arrow.svg';
+import { ArrowIcon } from './Arow';
 
-export function BackArrow() {
-    const navigate = useNavigate();
+interface BackArrowProps {
+  variant?: 'light' | 'dark';
+}
 
-    function handleClick() {
-        if (window.history.state && window.history.state.idx > 0) {
-            navigate(-1);
-        } else {
-            navigate('/login', { replace: true });
-        }
+export function BackArrow({ variant = "light" }: BackArrowProps ) {
+  const navigate = useNavigate();
+
+  function handleClick() {
+    if (window.history.state && window.history.state.idx > 0) {
+      navigate(-1);
+    } else {
+      navigate('/login', { replace: true });
     }
+  }
 
-    return (
-        <button type="button" onClick={handleClick} className='text-violet-500 p-2 rounded-lg hover:bg-violet-100 w-fit transition-all'>
-            <img src={arrow} alt="Voltar"/>
-        </button>
-    )
+  const styleVariants = {
+    "light": "text-violet-500 hover:bg-violet-100",
+    "dark": "text-white hover:bg-violet-700"
+  }
+
+  return (
+    <button type="button" onClick={handleClick} className={`${styleVariants[variant]} px-2 rounded-lg w-fit transition-all`}>
+      <ArrowIcon />
+    </button>
+  )
 };

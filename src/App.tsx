@@ -2,10 +2,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { StatusLayout } from './layouts/StatusLayout';
 
 import { Home } from './pages/Home';
-import { Success } from './pages/Success';
+import { Success } from './pages/status/Success';
 import { Login } from './pages/auth/Login';
 import { Register } from './pages/auth/Register';
 import { PasswordRecovery } from './pages/auth/PasswordRecovery';
+import { NewTeacherProfile } from './pages/app/NewTeacherProfile';
 
 export function App() {
   return (
@@ -18,10 +19,16 @@ export function App() {
 
         {/* Auth */}
         <Route path="/auth">
-          <Route path="login" element={<Login />} />
+          <Route path="login" index element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="passwordRecovery" element={<PasswordRecovery />} />
         </Route>
+
+        {/* App */}
+        <Route path="/app">
+          <Route path="lecture/newTeacherProfile" element={<NewTeacherProfile />} />
+        </Route>
+
 
       </Routes>
     </BrowserRouter>

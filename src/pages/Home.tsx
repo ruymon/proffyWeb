@@ -1,10 +1,13 @@
 import { FiBookOpen, FiPower, FiTv } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 import { Avatar } from "../components/Avatar";
 import { Button } from '../components/Button';
 
 interface HomeProps {};
 
 export function Home({}: HomeProps) {
+  const navigate = useNavigate();
+
   return (
     <main className="w-screen h-screen flex items-center flex-col gap-14 bg-slate-50">
       <header className="bg-violet-500 w-full text-violet-200 flex justify-center">
@@ -42,7 +45,7 @@ export function Home({}: HomeProps) {
           <span className='break-words text-slate-400 text-xs text-right leading-relaxed'>Total de 285 conexões já realizadas 💜</span>
 
           <div className='flex flex-col lg:flex-row items-center gap-4 shrink-0'>
-            <Button variant="primary" size="large">
+            <Button onClick={() => navigate('app/lecture/newTeacherProfile')} variant="primary" size="large">
               <FiTv size={40} />
               <span>Dar aulas</span>
             </Button>
